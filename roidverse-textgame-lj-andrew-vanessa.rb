@@ -18,18 +18,51 @@
     end
   
     def game_start 
+        puts <<-'title_art'
+██ ███    ██ ████████  ██████      ████████ ██   ██ ███████     
+██ ████   ██    ██    ██    ██        ██    ██   ██ ██          
+██ ██ ██  ██    ██    ██    ██        ██    ███████ █████       
+██ ██  ██ ██    ██    ██    ██        ██    ██   ██ ██          
+██ ██   ████    ██     ██████         ██    ██   ██ ███████     
+                                                                
+██████   ██████  ██ ██████  ███████ ██████                      
+██   ██ ██    ██ ██ ██   ██ ██      ██   ██                     
+██████  ██    ██ ██ ██   ██ █████   ██████                      
+██   ██ ██    ██ ██ ██   ██ ██      ██   ██                     
+██   ██  ██████  ██ ██████  ███████ ██   ██                     
+                                                                
+██    ██ ███████ ██████  ███████ ███████                        
+██    ██ ██      ██   ██ ██      ██                             
+██    ██ █████   ██████  ███████ █████                          
+ ██  ██  ██      ██   ██      ██ ██                             
+  ████   ███████ ██   ██ ███████ ███████       
 
-# title will go here ------------------------------------------------------------------
+title_art
 
-puts "Surive the Spider Roidverse!
+puts "Surive the Roiderverse!
 
 
  An interactive fiction created by LJ, Andrew, and Vanessa
 
 
- You're at the gym performing deadlifts and notice a spider crawling near your gym bag. Thinking nothing of it, you complete your set and leave the platform to get a drink of water from the fountain. While you're away, the spider you noticed crawling near your gym bag enters the bag and accesses your steroids. When you return from the water fountain, you find a monster-size roid raging spider has taken over the deadlift platform you were using! You MUST FIGHT to defend your gains. Your mission is do subdue and ultimately kill the spider, and regain control of the platform." 
-    
+ You're at the gym performing deadlifts and notice a spider crawling near your gym bag. Thinking nothing of it, you complete your set and leave to get a drink of water. While you're away, the spider crawls in your gym bag and uses your steroids. When you return, you find a monster-size roid raging spider has taken over the deadlift platform you were using! You MUST FIGHT to defend your gains. Your mission is to subdue and ultimately kill the spider, and regain control of the platform." 
 
+    puts <<-'user_art'
+
+              {{{{{{{{
+              I ^  ^ I
+             CI @  @ ID
+          __  I  .L  I  __        
+        _I  I \  ~~  / I  I_
+        I I  I  ______  I  I I
+  []    I I__I          I__I I    []
+ [ ]    I I  Io        oI  I I    [ ]
+[  ]======OOOO==========OOOO======[  ]
+ [ ]    I___I__\      /__I___I    [ ]
+  []    (______)      (_______)   []
+  -HF-
+
+  user_art
 
 puts "Welcome to the Roiderverse! Prepare to get swole!"
 
@@ -39,19 +72,38 @@ puts "Welcome to the Roiderverse! Prepare to get swole!"
     
         name = gets.chomp
     
-        puts "You and Roide lock eyes, he just started his set. How will you get your platform back?
+        puts "You and Roide lock eyes, he just started his set. How will you get your platform back?".print_slow
+        puts <<-'roide_art'
+
+        /\  .-"""-.  /\  jgs 
+        //\\/  ,,,  \//\\
+        |/\| ,;;;;;, |/\|
+        //\\\;-"""-;///\\
+       //  \/   .   \/  \\
+      (| ,-_| \ | / |_-, |)
+        //`__\.-.-./__`\\
+       // /.-(() ())-.\ \\
+      (\ |)   '---'   (| /)
+       ` (|           |) `
+         \)           (/
+
+ roide_art
+
         
-        Roide: 'Sup bro, you keep eyeballing me, you're going to catch these legs. 
+        puts "Roide: Sup bro, you keep eyeballing me, you're going to catch these legs.".print_slow
         
-        Are you going to let Roide trash talk AND take your spot?' y/n".print_slow
+        puts "Are you going to let Roide trash talk AND take your spot? y/n".print_slow
         quest = gets.chomp
     
         if quest == "y"
             puts 'Say goodbye to your gains and hop on the treadmill'.print_slow
             game_start
-        else 
+        elsif quest == "n"
             puts 'I knew the gains were worth it, now get your ass going and go find your weapon of choice to defeat this juiced up jenny long legs'.print_slow
             sleep 0.05
+        else 
+            puts 'Try again'
+            game_start
         end
     end   
     
@@ -69,9 +121,9 @@ puts "Welcome to the Roiderverse! Prepare to get swole!"
             ".print_slow
             battle1
         elsif ans1 == 'shaker bottle'|| ans1 == 'shaker'
-                puts "Zero damage - Roide is now raging
+                puts "Zero damage - Roide is now raging!
                 ".print_slow    
-                puts "Head over to the free weights section and see what you can find.".print_slow
+                puts "Quick, head over to the free weights section and see what you can find!".print_slow
 
         else 
             puts "Input correct item.".print_slow
@@ -110,10 +162,18 @@ puts "Welcome to the Roiderverse! Prepare to get swole!"
  
 
 
+    puts <<-'distress_art'
+    .----------.
+    /  .-.  .-.  \
+   /   | |  | |   \
+   \   `-'  `-'  _/
+   /\     .--.  / |
+   \ |   /  /  / /
+   / |  `--'  /\ \
+    /`-------'  \ \ 
 
+    distress_art
 
-
-    
     def battle3
 
     
@@ -143,8 +203,8 @@ puts "Welcome to the Roiderverse! Prepare to get swole!"
         puts  'Chad yells "Grab my key card so we can lock Roide in the tanning bed. LETS ROAST THIS JUICEBAG!" Do you grab the key? y/n?'.print_slow
         ans4 = gets.chomp
         if ans4 == 'y'
-            puts 'With the key, you and Chad open the tanning bed and using your best deadlift technique, hoist Roide into the bed. Once Roide is in the bed, you crank it to the max and watch him burn.'.print_slow 
-            puts 'Congratulations!! You are now an Arachnassassin! With Roide defeated, you and Chad can now get back to lifting.'.print_slow
+            puts 'With the key, you and Chad open the tanning bed and using your best deadlift technique, hoist Roide into the bed. Once Roide is in the bed, you crank it to the max and watch him BURN!!!'.print_slow 
+            puts 'Congratulations!! You are now an Arachnassassin! With Roide defeated, you and Chad can now get back to lifting!'.print_slow
         else
             puts 'Oh no! The muscle relaxers have worn off! Roide consumes both you and Chad as his third pre-workout then goes back to lift. GAME OVER.'.print_slow
             sleep 0.05
@@ -152,3 +212,42 @@ puts "Welcome to the Roiderverse! Prepare to get swole!"
         end
     end
     battle4
+
+    puts <<-'chad_art'
+
+                 ,#####,
+                 #_   _#
+                 |a` `a|
+                 |  u  |
+                 \  =  /
+                 |\___/|
+        ___ ____/:     :\____ ___
+      .'   `.-===-\   /-===-.`   '.
+     /      .-"""""-.-"""""-.      \
+    /'             =:=             '\
+  .'  ' .:    o   -=:=-   o    :. '  `.
+  (.'   /'. '-.....-'-.....-' .'\   '.)
+  /' ._/   ".     --:--     ."   \_. '\
+ |  .'|      ".  ---:---  ."      |'.  |
+ |  : |       |  ---:---  |       | :  |
+  \ : |       |_____._____|       | : /
+  /   (       |----|------|       )   \
+ /... .|      |    |      |      |. ...\
+|::::/'' jgs /     |       \     ''\::::|
+'""""       /'    .L_      `\       """"'
+           /'-.,__/` `\__..-'\
+          ;      /     \      ;
+          :     /       \     |
+          |    /         \.   |
+          |`../           |  ,/
+          ( _ )           |  _)
+          |   |           |   |
+          |___|           \___|
+          :===|            |==|
+           \  /            |__|
+           /\/\           /"""`8.__
+           |oo|           \__.//___)
+           |==|
+           \__/
+
+           chad_art
